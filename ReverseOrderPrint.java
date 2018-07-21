@@ -22,6 +22,7 @@ public class ReverseOrderPrint {
         treestructure.insert();
         NodeStructure root=treestructure.getroot();
         print(root);
+        alternateReverse(root);
     }
     
     public void print(NodeStructure root){
@@ -62,6 +63,43 @@ public class ReverseOrderPrint {
             stack.pop();
         }
     }
+    
+    public void alternateReverse(NodeStructure root){
+        boolean flag=false;
+        Queue<NodeStructure> q1=new LinkedList<>();
+        Queue<NodeStructure> q2=new LinkedList<>();
+        Stack<Integer> stack = new Stack<>();
+
+        Iterator itr=q1.iterator();
+        Iterator itr2=q2.iterator();  
+        q1.add(root);
         
+        while(itr.hasNext()|| itr2.hasNext()){
+            while(itr.hasNext()){
+                if(q1.element().left  != null)
+                    q2.add(q1.element().left);
+
+                if(q1.element().right != null)
+                     q2.add(q1.element().right);
+                stack.add(q1.peek().key);
+                q1.remove();
+            }
+            while (itr2.hasNext()){
+                if (q2.element().left != null)
+                    q1.add(q2.element().left);
+                
+                if (q2.element().right != null)
+                    q1.add(q2.element().right);
+                
+                while(!stack.empty()){
+                    System.out.print(stack.peek()+" ");
+                    stack.pop();    
+                }
+                    q2.remove();
+                
+            }
+        
+        }
+    }
 }
 

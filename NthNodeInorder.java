@@ -36,7 +36,7 @@ public class NthNodeInorder {
      }
      public void displayStack(){
         int num=0;
-         System.out.println("enter index value to know value");
+         System.out.print("enter index value to know value");
          Scanner s=new Scanner(System.in);
          num=s.nextInt();
         System.out.println("stack->");

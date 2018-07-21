@@ -17,20 +17,36 @@ public class BinaryTree {
     public static void main(String[] args) {
         // TODO code application logic here
        
-        NthNodeInorder n=new NthNodeInorder();
-        n.inorder();
+        NthNodeInorder node=new NthNodeInorder();
+        node.inorder();
+        
+        NthNodePostorder nthnode=new NthNodePostorder();
+        nthnode.postOrder();
         
         SipralLevelOrder s=new SipralLevelOrder();
-        //s.sprialPrint();
+        s.sprialPrint();
         
-       // LevelOrder l=new LevelOrder();
-       // l.levelOrderPrint();
+        LevelOrder levelorder=new LevelOrder();
+        levelorder.levelOrderPrint();
         
-        NewLineLevelOrder l=new NewLineLevelOrder();
-      //  l.newLinePrint();
+        NewLineLevelOrder newline=new NewLineLevelOrder();
+        newline.newLinePrint();
         
-        ReverseOrderPrint r=new ReverseOrderPrint();
-      //  r.reverOrder();
+        ReverseOrderPrint reverse=new ReverseOrderPrint();
+        reverse.reverOrder();
+        
+        DiagonalTraversal d=new DiagonalTraversal();
+        d.diagonal();
+        
+        SpecificLevelOrder specific =new SpecificLevelOrder();
+        specific.specificPrinting();
+        
+        MorrisTraversal morris = new MorrisTraversal();
+        morris.morrrisPrinting();
+        
+        ItrativeTraversal itrative=new ItrativeTraversal();
+        itrative.traversals();
+        
     }
     
 }

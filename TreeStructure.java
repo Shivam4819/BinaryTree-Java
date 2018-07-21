@@ -104,27 +104,6 @@ public class TreeStructure extends NodeStructure{
         }
     }
     
-    public void nthinorder(NodeStructure root, int num){
-    int count=0;
-        if(root==null)
-            return;
-        if(count<=num){
-            nthinorder(root.left,num);
-            count++;
-           // System.out.println("count->"+c);
-            if(count==num)
-                System.out.println(root.key+" ");
-        
-            nthinorder(root.right,num);
-        }
-    }
-    public void inorder(NodeStructure root){
-        if(root==null)
-            return;
-        inorder(root.left);
-        System.out.println(root.key+" ");
-        inorder(root.right);
-    }
     
     NodeStructure getroot(){
         return root;
