@@ -47,6 +47,8 @@ public class BinaryTree {
         ItrativeTraversal itrative=new ItrativeTraversal();
         itrative.traversals();
         
+        Density density=new Density();
+        density.depthAndDensity();
     }
     
 }
